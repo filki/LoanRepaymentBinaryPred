@@ -5,5 +5,8 @@ Data source:
 https://www.kaggle.com/datasets/rohitudageri/credit-card-details
 ## Part one: Quick introduction to dataset
 
-## Part One: EDA and data cleansing
+## Part two: EDA and data cleansing
 After reading the file using pandas method ```pd.read_csv()```, we can see that some of the values in our dataset are not clear as they should be.
+
+Bibliography:
+
