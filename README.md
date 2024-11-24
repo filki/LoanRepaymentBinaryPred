@@ -1,3 +1,6 @@
+![Badge Description](https://img.shields.io/badge/Hello%20World-blue)
+
+
 # LoanRepaymentBinaryPred
 The aim of this project is to present author skills in data analysis and machine learning fields. Due to author's isnufficient knowledge about banking, the analysis took only the quantitive character.
 
