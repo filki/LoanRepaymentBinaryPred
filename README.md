@@ -53,7 +53,7 @@ Use the URL provided in the terminal (it includes an authentication token) to ac
 
 
 
-## Part one: Quick introduction to dataset
+# Data
 Data source:
 https://www.kaggle.com/datasets/rohitudageri/credit-card-details
 
@@ -104,13 +104,58 @@ Another data set (Credit_card_label.csv) contains two key pieces of information
 ## Data Acquisition
 Data was artificially generated.
 ## Data Preprocessing
-In the beggining we load file using pandas method ```pd.read_csv()```. Then, using ```df.head()```
-method we are able to see the first glimpse on our data. As with all data, there is a place for improvement.
-## Code Structure
 
-## Results and evaluation
+After loading the file, copy was created and several approaches were taken. 
+Multiple columns were modified to improve data readibility and to reduce curse of dimensionality. Some columns were added to improve variance of dataset.
 
-## Future work
+The process was then split into two strategies:
+* NA ignoring
+
+* NA Imputation
+
+
+Then, numerous visualizations were carried out in search of relationships between variables or other data properties.
+
+Finally, in order for our model to understand categorical data, we've used Label Encoding.
+
+
+
+# Results and evaluation
+Based on imputed dataframed using the "most frequent" method we've trained DecisionTreeClassifier. After training and predicting, below results were produced:
+
+| class | precision | recall | f1-score | support |
+|-------|-----------|--------|----------|---------|
+| 0     | 0.94      | 0.86   | 0.90     | 465     |
+| 1     | 0.25      | 0.46   | 0.32     | 46      |
+
+As we can see, due to low support of clas 1, model had poor scores in classification of those. Therefore, we will try hyperparameter optimization using 
+```GridSearchCV```. 
+
+Below parameters grid used for tuning.
+```python
+param_grid = {
+    'criterion': ['gini', 'entropy'],
+    'max_depth': [None, 5, 10, 15],
+    'min_samples_split': [2, 5, 10],
+    'min_samples_leaf': [1, 2, 4],
+    'max_features': ['sqrt', 'log2']
+}
+```
+
+After optimization, below resulsts were produced:
+|             | precision | recall | f1-score | support |
+|-------------|-----------|--------|----------|---------|
+| 0           | 0.91      | 0.99   | 0.95     | 465     |
+| 1           | 0.43      | 0.07   | 0.11     | 46      |
+| accuracy    |           |        | 0.91     | 511     |
+| macro avg   | 0.67      | 0.53   | 0.53     | 511     |
+| weighted avg| 0.87      | 0.91   | 0.88     | 511     |
+
+As we cam see, model is surely overtrained, because f1-score of 0 class is much higher, meanwhile the scores for 0 are drastically lower. Therefore, this model failed in predicting.
+
+# Future work
+
+There is possibility that oversampling techniques would benefit our work, due to low support of one class. Furthermore, creating more models using various imputation techniques could aslo bolster search of ideal classifier. Different encoding approaches could also reinforce our model robustness.
 
 Bibliography:
 
