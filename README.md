@@ -1,4 +1,8 @@
-![Contributors](https://img.shields.io/github/contributors/:filki:LoanRepaymentBinaryPred
+![Contributors](https://img.shields.io/github/contributors/filki/LoanRepaymentBinaryPred?style=for-the-badge&logo=github)
+![Release](https://img.shields.io/github/release/filki/LoanRepaymentBinaryPred?style=for-the-badge&logo=github)
+![Last_commit](https://img.shields.io/github/last-commit/filki/LoanRepaymentBinaryPred?style=for-the-badge&logo=github)\
+![License](https://img.shields.io/github/license/filki/LoanRepaymentBinaryPred?style=for-the-badge&logo=github)
+
 
 
 
