@@ -28,9 +28,22 @@ http://127.0.0.1:8888/tree?token=bd94c3f1484bd27ef10905104cf622ea4ec3a5fd23563ef
 
 Use the URL provided in the terminal (it includes an authentication token) to access the Jupyter server securely. This token ensures that only authorized users can access the Jupyter environment.
 
-### Additional Information
+## Packages used
+* General Purpose
+    
+* Data Manipulation
+    * numpy==1.26.4
+    * pandas==2.2.1
+* Data Visualization
+    * matplotlib==3.8.3
+    * seaborn==0.13.2
+* Machine Learning
+    * scikit_learn==1.4.1.post1
+* Statistics
+    * scipy==1.12.0
 
-For more details on managing your Docker containers or Jupyter notebooks, refer to the respective official documentation.
+
+
 
 ## Part one: Quick introduction to dataset
 Data source:
@@ -80,11 +93,16 @@ Another data set (Credit_card_label.csv) contains two key pieces of information
 * ID: The joining key between application data and credit status data, same is Ind_ID
 
 *Label: 0 is application approved and 1 is application rejected.
-
-## Part two: EDA and data cleansing
+## Data Acquisition
+Data was artificially generated.
+## Data Preprocessing
 In the beggining we load file using pandas method ```pd.read_csv()```. Then, using ```df.head()```
 method we are able to see the first glimpse on our data. As with all data, there is a place for improvement.
+## Code Structure
 
+## Results and evaluation
+
+## Future work
 
 Bibliography:
 
